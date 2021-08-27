@@ -71,13 +71,14 @@ async function main() {
 	// Commit changes to the Git and create a tag.
 	step('\nCommitting changes...')
 	await run('git', ['add', 'CHANGELOG.md', 'package.json'])
-	await run('git', ['commit', '-m', `release: v${targetVersion}`])
-	await run('git', ['tag', `v${targetVersion}`])
+  await run('git', ['commit', '-m', `release: v${targetVersion}`])
+  await run('git', ['tag', `v${targetVersion}`])
 
 	// Push to GitHub on a new release branch
 	step('\nPushing to GitHub...')
 	await run('git', ['push', '--set-upstream', 'origin', `release-v${targetVersion}`])
-  await run('git', ['push'])}
+  await run('git', ['push'])
+}
 
 	function updatePackage(version) {
 	const pkgPath = path.resolve(path.resolve(__dirname, '..'), 'package.json')

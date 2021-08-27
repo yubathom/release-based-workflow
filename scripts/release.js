@@ -72,7 +72,6 @@ async function main() {
 	step('\nCommitting changes...')
 	await run('git', ['add', 'CHANGELOG.md', 'package.json'])
 	await run('git', ['commit', '-m', `release: v${targetVersion}`])
-	await run('git', ['checkout', '-b', `release-v${targetVersion}`])
 	await run('git', ['tag', `v${targetVersion}`])
 
 	// Push to GitHub on a new release branch

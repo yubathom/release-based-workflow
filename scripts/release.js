@@ -72,15 +72,15 @@ async function main() {
 	step('\nCommitting changes...')
 	await run('git', ['add', 'CHANGELOG.md', 'package.json'])
 	await run('git', ['commit', '-m', `release: v${targetVersion}`])
+	await run('git', ['checkout', '-b', `release-v${targetVersion}`])
 	await run('git', ['tag', `v${targetVersion}`])
 
 	// Push to GitHub on a new release branch
 	step('\nPushing to GitHub...')
-	await run('git', ['push', 'origin', `refs/tags/v${targetVersion}`])
-	await run('git', ['push', '--set-upstream', 'origin', `v${targetVersion}`])
-}
+	await run('git', ['push', '--set-upstream', 'origin', `release-v${targetVersion}`])
+  await run('git', ['push'])}
 
-function updatePackage(version) {
+	function updatePackage(version) {
 	const pkgPath = path.resolve(path.resolve(__dirname, '..'), 'package.json')
 	const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
 

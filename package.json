@@ -23,6 +23,7 @@
     "conventional-changelog-cli": "^2.1.1",
     "enquirer": "^2.3.6",
     "execa": "^5.1.1",
+    "gitignore": "^0.7.0",
     "prettier": "^2.3.2",
     "semver": "^7.3.5"
   }

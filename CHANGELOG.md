@@ -1,3 +1,5 @@
+## [1.0.6](https://github.com/yubathom/release-based-workflow/compare/v1.0.5...v1.0.6) (2021-08-27)
+
 ## [1.0.5](https://github.com/yubathom/release-based-workflow/compare/v1.0.4...v1.0.5) (2021-08-27)
 
 ### Features

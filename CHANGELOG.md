@@ -1,3 +1,9 @@
+## [1.2.7](https://github.com/yubathom/release-based-workflow/compare/v1.2.6...v1.2.7) (2021-08-28)
+
+### Bug Fixes
+
+- relases script ([1b3b8fa](https://github.com/yubathom/release-based-workflow/commit/1b3b8fafc6e92b313a785cca098a443454c1b779))
+
 ## [1.2.6](https://github.com/yubathom/release-based-workflow/compare/v1.2.4...v1.2.6) (2021-08-28)
 
 ## [1.2.5](https://github.com/yubathom/release-based-workflow/compare/v1.2.4...v1.2.5) (2021-08-28)

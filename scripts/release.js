@@ -65,7 +65,8 @@ async function main() {
 	})
 
 	if (!changelogOk) {
-		return
+		// return
+		await run('git', ['checkout', '--', '.'])
 	}
 
 	// Commit changes to the Git and create a tag.

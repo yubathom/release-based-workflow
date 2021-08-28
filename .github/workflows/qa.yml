@@ -1,0 +1,17 @@
+name: "qa"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev
+      - main
+jobs:
+  build:
+    if: "contains(github.event.commits[0].message, '[deploy-qa]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: qa
+        run: |
+          echo 'qa'

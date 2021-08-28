@@ -73,11 +73,6 @@ async function main() {
 	await run('git', ['add', 'CHANGELOG.md', 'package.json'])
   await run('git', ['commit', '-m', `release: v${targetVersion}`])
   await run('git', ['tag', `v${targetVersion}`])
-
-	// Push to GitHub on a new release branch
-	step('\nPushing to GitHub...')
-	await run('git', ['push', '--set-upstream', 'origin', `release-v${targetVersion}`])
-  await run('git', ['push'])
 }
 
 	function updatePackage(version) {
